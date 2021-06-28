@@ -1,0 +1,50 @@
+JSON  --> JavaScript Object Notation
+
+
+Creating JSON Object
+
+{
+    "name":"Aman",
+    "score":"100",
+    "isAdmin":true,
+    "License":null,
+    "shopItems":["Foods","Grocery","Beverages"],
+    "myObj":{
+        "name":"Vivek",
+        "Grade":"A++",
+        "Friends":["harshit","katiyar","Kartikey",{"no":"Vihaan"}]
+    }
+}
+
+
+For run these JSON Please Use Any of your Favourite Browsers or JS
+
+myJson=`{
+    "name":"Aman",
+    "score":"100",
+    "isAdmin":true,
+    "License":null,
+    "shopItems":["Foods","Grocery","Beverages"],
+    "myObj":{
+        "name":"Vivek",
+        "Grade":"A++",
+        "Friends":["harshit","katiyar","Kartikey",{"no":"Vihaan"}]
+    }
+}`
+
+parsed=JSON.parsed(myJson)  
+parsed.name  --> Aman
+parsed.License  --> null
+parsed.shopItmes  --> ["Foods","Grocery","Beverages"]
+parsed.shopItmes.length  --> 3
+parsed.shopItmes[2]  --> Beverages
+parsed.myObj  --> {
+    "name":"Vivek",
+    "Grade":"A++",
+    "Friends":["harshit","katiyar","Kartikey",{"no":"aman"}]
+}
+parsed.myObj.Grade  --> A++
+parsed.myObj.Friends.length  --> 4
+parsed.myObj.Friends[2]  --> Kartikey
+parsed.myObj.Friends[3].no.length  --> 1
+parsed.myObj.Friends[3].no  --> Vihaan
